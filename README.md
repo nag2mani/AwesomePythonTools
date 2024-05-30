@@ -1,2 +1,2 @@
 # General_function
-All function that I made
+Functions that I love to use.
