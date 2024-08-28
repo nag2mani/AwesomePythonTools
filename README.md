@@ -10,14 +10,15 @@ Welcome to **AwesomePythonTools**, a collection of cool and useful Python script
 
 ### 📂 Project Structure
 
-- **Birthday_Wishes**: Automatically sends birthday wishes via WhatsApp or email.
-- **Custom_Classes**: Custom Python classes for various tasks and utilities.
-- **Desktop_File_Listing**: Lists all files on your desktop, useful for quick reference or management.
-- **New_Year_Wishes**: A script to automate sending New Year’s wishes.
-- **Word_Counter**: A Python-based word counter tool to analyze text files.
-- **bekushal_Content_Download**: Script for downloading content from the BeKushal platform.
+- **whatsapp_auto_software**: Automates sending messages in bulk on WhatsApp for various use cases.
 - **web_to_pdf**: Convert any web page into a PDF with this simple tool.
-- **whatsapp_auto_software**: Automates sending messages on WhatsApp for various use cases.
+- **Desktop_File_Listing**: Lists all files on your desktop, useful for quick reference or management.
+- **Birthday_Wishes**: Cool birthday wishes send via WhatsApp or email.
+- **Custom_Classes**: Custom Python classes for various tasks and utilities.
+- **bekushal_Content_Download**: Script for downloading content from the BeKushal platform.
+- **New_Year_Wishes**: A script to send cool New Year’s wishes.
+- **Word_Counter**: A Python-based word counter tool to analyze text files.
+
 
 ## 🛠️ Libraries Used
 
@@ -55,11 +56,3 @@ Each project uses different Python libraries based on its specific needs. Some c
 ## 🧑‍💻 Contributing
 
 Feel free to fork this repository, make improvements, and submit a pull request! Contributions are welcome, whether it’s fixing bugs, adding new features, or improving the code quality.
-
-## 📧 Contact
-
-If you have any questions, suggestions, or just want to connect, feel free to reach out to me at **[your-email@example.com](mailto:your-email@example.com)** or find me on [GitHub](https://github.com/nag2mani).
-
----
-
-Let me know if you need any more customization!
