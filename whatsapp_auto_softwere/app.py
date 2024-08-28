@@ -39,7 +39,7 @@ class style():
 # Introduction banner
 print(style.BLUE)
 print("**********************************************************")
-print("*****      This tool is maintained by Nagmani Kumar     **")
+print("******* This tool is maintained by Nagmani Kumar  ********")
 print("**********************************************************")
 print(style.RESET)
 
@@ -62,7 +62,7 @@ message = quote(message)
 with open("numbers.txt", "r") as f:
     numbers = [line.strip() for line in f if line.strip() != ""]
 total_number = len(numbers)
-print(style.RED + 'We found ' + str(total_number) + ' numbers in the file' + style.RESET)
+print(style.RED + 'We found ' + str(total_number) + ' numbers in the file :' + style.RESET)
 
 
 # Time to wait before sending the message
@@ -76,7 +76,7 @@ wait_time_between_messages = 4
 # Initialize the Chrome driver using the Service object
 driver_service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=driver_service, options=options)
-print('Once your browser opens up sign in to WhatsApp Web')
+print('Once your browser opens up sign in to WhatsApp Web.')
 driver.get('https://web.whatsapp.com')
 
 
