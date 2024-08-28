@@ -12,7 +12,7 @@ def save_webpage_as_pdf(url, output_filename):
 
 if __name__ == "__main__":
     url = "https://en.wikipedia.org/wiki/Alfred_Nobel"
-    output_filename = "output.pdf"
+    output_filename = "web_to_pdf/output.pdf"
 
     save_webpage_as_pdf(url, output_filename)
 
