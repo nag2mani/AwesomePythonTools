@@ -1,0 +1,12 @@
+After Unzipping Follow these steps;
+- Go inside unzipped folder.
+- Open this folder with VS Code.
+- In number.txt and add one number in one line with country code like 919356668878
+- In message.txt and add any message which you want to send.
+- Then run following commands;
+    pip install -r requirements.txt
+    python app.py
+
+- Then it will open your chrome & login using scanning QR code.
+- After login click Enter.
+- Wait, It will automatically send message to all number one by one.
