@@ -28,9 +28,3 @@ We welcome all contributions! Whether you have a useful Python script, a creativ
 
 ## 📜 License
 This repository is licensed under the MIT License. Feel free to use, modify, and share the content.
-
----
-
-Let's build an amazing collection of Python tools together! Feel free to explore and contribute!
-
-**Repo Link**: [AwesomePythonTools](https://github.com/nag2mani/AwesomePythonTools)
