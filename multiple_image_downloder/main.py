@@ -5,7 +5,7 @@ from PIL import Image
 from io import BytesIO
 
 # Define the base URL and the range of the last digit
-base_url = "https://www.bekushal.com/data/abhyas/artificial_neural_networks/mcq"
+base_url = "https://www.example.com/data/mcq"
 start_digit = 20
 end_digit = 30
 
