@@ -1,5 +1,3 @@
-
-```markdown
 # YouTube Audio Downloader 🎵
 
 A simple and efficient Python-based tool to download audio from YouTube videos in high-quality MP3 format. This tool uses the powerful `yt-dlp` library for seamless downloads and audio conversion.  
