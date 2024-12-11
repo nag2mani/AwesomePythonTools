@@ -28,3 +28,5 @@ We welcome all contributions! Whether you have a useful Python script, a creativ
 
 ## 📜 License
 This repository is licensed under the MIT License. Feel free to use, modify, and share the content.
+
+https://chatgpt.com/share/6715b41f-5040-8007-aa35-dba4ca5908cc

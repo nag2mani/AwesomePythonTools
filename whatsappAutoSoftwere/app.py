@@ -93,7 +93,7 @@ for idx, number in enumerate(numbers):
     try:
         url = f'https://web.whatsapp.com/send?phone={number}&text={message}'
         sent = False
-        for i in range(3):  # Retry 3 times if needed
+        for i in range(2):  # Retry 3 times if needed
             if not sent:
                 driver.get(url)
                 try:
