@@ -21,12 +21,5 @@ We welcome all contributions! Whether you have a useful Python script, a creativ
 4. **Test** your code and ensure it follows the contribution guidelines.
 5. **Submit** a pull request and provide a brief description of your tool.
 
-## 💡 Why Contribute?
-- Share your knowledge and help others discover useful tools.
-- Learn from a community of Python enthusiasts.
-- Collaborate and improve your coding skills.
-
 ## 📜 License
 This repository is licensed under the MIT License. Feel free to use, modify, and share the content.
-
-https://chatgpt.com/share/6715b41f-5040-8007-aa35-dba4ca5908cc
