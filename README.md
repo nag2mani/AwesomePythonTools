@@ -1,6 +1,6 @@
 # AwesomePythonTools 🚀
 
-Welcome to **AwesomePythonTools**! This repository is a curated collection of amazing Python scripts and tools built using Python's powerful libraries. Whether you're automating everyday tasks, processing data, building cool projects, or exploring Python's vast ecosystem, you'll find something useful here.
+This repository is a curated collection of amazing Python scripts and tools built using Python's powerful libraries. Whether you're automating everyday tasks, processing data, building cool projects, or exploring Python's vast ecosystem, you'll find something useful here.
 
 ## 🌟 What's Included
 - **Automation scripts**: Tools to automate repetitive tasks and boost productivity.
@@ -11,7 +11,7 @@ Welcome to **AwesomePythonTools**! This repository is a curated collection of am
 ## 🛠️ How to Contribute
 We welcome all contributions! Whether you have a useful Python script, a creative project, or a tool that you think belongs here, feel free to submit a pull request.
 
-### Steps to Contribute:
+**Steps to Contribute:**
 1. **Fork** this repository.
 2. **Clone** your fork to your local machine.
    ```bash
