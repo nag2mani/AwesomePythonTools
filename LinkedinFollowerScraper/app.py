@@ -1,0 +1,74 @@
+import re
+import csv
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.common.exceptions import NoSuchElementException, TimeoutException, WebDriverException
+
+# Set up the WebDriver (only log in once)
+driver = webdriver.Chrome()
+driver.get("https://www.linkedin.com/login")
+
+# Log in manually or automate login
+username = driver.find_element(By.ID, "username")
+password = driver.find_element(By.ID, "password")
+
+username.send_keys("nagmani@buildfastwithai.com") # put your user email.
+password.send_keys("12345@abc") # put your password
+password.send_keys(Keys.RETURN)
+
+time.sleep(5)  # Wait for login to complete
+
+# LBTaIoGynAvVVrXFUFtzJLtqpCOQdKJEPKDnw (This is the class which contain no. of followers on linkedin source code).
+
+def get_followers(url):
+    """Retrieve the follower count from a LinkedIn profile URL."""
+    try:
+        if not url.startswith("http"):
+            url = "https://" + url  # Add https if missing
+        
+        if "linkedin.com/in/" in url and not url.startswith("https://www."):
+            url = url.replace("http://", "https://").replace("linkedin.com", "www.linkedin.com")
+
+        print(f"Processing: {url}")  # Debugging statement
+        
+        driver.get(url)  # Visit the corrected LinkedIn profile
+        time.sleep(5)  # Wait for page to load
+
+        # Locate follower count (adjust class name if needed)
+        elements = driver.find_elements(By.CLASS_NAME, "LBTaIoGynAvVVrXFUFtzJLtqpCOQdKJEPKDnw")  # Replace with actual class name
+        for element in elements:
+            text = element.text.strip()
+            match = re.findall(r"\d+", text)  # Find all numbers in the text
+            if match:
+                return "".join(match)  # Join digits to form full number (e.g., "6543")
+
+    except (NoSuchElementException, TimeoutException, WebDriverException):
+        print(f"Skipping invalid URL: {url}")
+        return "Invalid URL"  # Avoid crashing and move to the next URL
+    
+    return "No Data"
+
+
+# Read CSV and process LinkedIn URLs
+input_csv = "linkedin_profiles.csv"   # Change to your actual file path
+output_csv = "output.csv"  # File where results will be stored
+
+with open(input_csv, "r", encoding="utf-8") as infile, open(output_csv, "w", encoding="utf-8", newline="") as outfile:
+    reader = csv.reader(infile)
+    writer = csv.writer(outfile)
+
+    headers = next(reader)  # Read headers
+    headers.append("Followers")  # Add new column for followers count
+    writer.writerow(headers)
+
+    for row in reader:
+        profile_url = row[4].strip()  # Adjust index if needed
+        followers_count = get_followers(profile_url)
+        row.append(followers_count)
+        writer.writerow(row)
+        print(f"Processed: {profile_url} -> {followers_count}")
+
+print("Data extraction completed. Check output.csv")
+driver.quit()  # Close browser at the end
