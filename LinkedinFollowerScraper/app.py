@@ -15,12 +15,12 @@ username = driver.find_element(By.ID, "username")
 password = driver.find_element(By.ID, "password")
 
 username.send_keys("nagmani@buildfastwithai.com") # put your user email.
-password.send_keys("12345@abc") # put your password
+password.send_keys("12345") # put your password
 password.send_keys(Keys.RETURN)
 
 time.sleep(5)  # Wait for login to complete
 
-# LBTaIoGynAvVVrXFUFtzJLtqpCOQdKJEPKDnw (This is the class which contain no. of followers on linkedin source code).
+# LBTaIoGynAvVVrXFUFtzJLtqpCOQdKJEPKDnw, YSpfLLaafijBITomsMQMeWFftPofXfPavmg (This is the class which contain no. of followers on linkedin source code).
 
 def get_followers(url):
     """Retrieve the follower count from a LinkedIn profile URL."""
@@ -37,7 +37,7 @@ def get_followers(url):
         time.sleep(5)  # Wait for page to load
 
         # Locate follower count (adjust class name if needed)
-        elements = driver.find_elements(By.CLASS_NAME, "LBTaIoGynAvVVrXFUFtzJLtqpCOQdKJEPKDnw")  # Replace with actual class name
+        elements = driver.find_elements(By.CLASS_NAME, "YSpfLLaafijBITomsMQMeWFftPofXfPavmg")  # Replace with actual class name
         for element in elements:
             text = element.text.strip()
             match = re.findall(r"\d+", text)  # Find all numbers in the text
@@ -50,6 +50,13 @@ def get_followers(url):
     
     return "No Data"
 
+
+def fix_follower_count(followers_count):
+    if isinstance(followers_count, str) and followers_count == "Invalid URL":
+        return followers_count
+    else:
+        followers_count = str(followers_count)
+        return followers_count[:len(followers_count) // 2]
 
 # Read CSV and process LinkedIn URLs
 input_csv = "linkedin_profiles.csv"   # Change to your actual file path
@@ -66,9 +73,12 @@ with open(input_csv, "r", encoding="utf-8") as infile, open(output_csv, "w", enc
     for row in reader:
         profile_url = row[4].strip()  # Adjust index if needed
         followers_count = get_followers(profile_url)
+        followers_count = fix_follower_count(followers_count) # remove repetition.
         row.append(followers_count)
         writer.writerow(row)
         print(f"Processed: {profile_url} -> {followers_count}")
 
 print("Data extraction completed. Check output.csv")
 driver.quit()  # Close browser at the end
+
+
