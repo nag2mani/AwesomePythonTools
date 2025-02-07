@@ -1,1 +1,8 @@
-1. Give random sleep timing to escape from Linkedin crawler.
+Steps to use:-
+1. Put your username in line 17 and password in line 18 in the app.py file
+2. Adjust the index in line 74, give index of linkedin profile.
+3. make sure this file "linkedin_profiles.csv" contain linkedin url.
+4. Then run this "app.py" python file. 
+5. Use random sleep timings to evade LinkedIn trackers.
+
+Note: This is for educational purposes only. Do not use it on a large scale.
