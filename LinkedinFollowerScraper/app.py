@@ -1,6 +1,12 @@
+"""
+Author: Nagmani Kumar
+Date: 6th Feb 2025
+"""
+
 import re
 import csv
 import time
+import random
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
@@ -15,7 +21,7 @@ username = driver.find_element(By.ID, "username")
 password = driver.find_element(By.ID, "password")
 
 username.send_keys("nagmani@buildfastwithai.com") # put your user email.
-password.send_keys("12345") # put your password
+password.send_keys("nag2mani@BFWA") # put your password
 password.send_keys(Keys.RETURN)
 
 time.sleep(5)  # Wait for login to complete
@@ -34,10 +40,10 @@ def get_followers(url):
         print(f"Processing: {url}")  # Debugging statement
         
         driver.get(url)  # Visit the corrected LinkedIn profile
-        time.sleep(5)  # Wait for page to load
+        time.sleep(random.randint(3, 8))  # Wait for page to load
 
         # Locate follower count (adjust class name if needed)
-        elements = driver.find_elements(By.CLASS_NAME, "YSpfLLaafijBITomsMQMeWFftPofXfPavmg")  # Replace with actual class name
+        elements = driver.find_elements(By.CLASS_NAME, "UewvjtwmCDIAgLpPGpkDwNoLXEKSIAfFKiaU")  # Replace with actual class name
         for element in elements:
             text = element.text.strip()
             match = re.findall(r"\d+", text)  # Find all numbers in the text
