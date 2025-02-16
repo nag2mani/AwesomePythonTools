@@ -19,8 +19,8 @@ os.environ["WDM_LOG_LEVEL"] = "0"
 driver_service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=driver_service, options=options)
 
-# Open the desired page
-driver.get('https://github.com/nag2mani')
+# Open the desired page(Put your own link)
+driver.get('https://example.com')
 
 # Refresh the page every 2 seconds
 a=1

@@ -21,7 +21,7 @@ username = driver.find_element(By.ID, "username")
 password = driver.find_element(By.ID, "password")
 
 username.send_keys("nagmani@buildfastwithai.com")  # Put your user email
-password.send_keys("nag2mani@BFWA")  # Put your password
+password.send_keys("password")  # Put your password
 password.send_keys(Keys.RETURN)
 
 time.sleep(5)  # Wait for login to complete
