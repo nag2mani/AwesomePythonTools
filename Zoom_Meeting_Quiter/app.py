@@ -1,7 +1,7 @@
 import pyautogui
 import time
 
-leave_time = "16:56"  # 24-hour format
+leave_time = "16:58"  # 24-hour format
 
 while True:
     current_time = time.strftime("%H:%M")
