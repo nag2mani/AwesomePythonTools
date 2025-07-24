@@ -40,5 +40,5 @@ def unlock_all_pdfs_in_folder(input_folder, output_folder, password):
 unlock_all_pdfs_in_folder(
     input_folder="locked_files",
     output_folder="unlocked_files",
-    password="your_password_here"  # Replace with your actual password
+    password="1234@omg"  # Replace with your actual password
 )
